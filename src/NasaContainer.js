@@ -48,6 +48,7 @@ const NasaContainer = () => {
 
   }, [objects]);
 
+  //Récupérer les données de l'API de la nasa
   const getDataApi = async() => {
     try{
       const momentStartDate =  moment(startDate).format(DATE_FORMAT);
@@ -56,7 +57,7 @@ const NasaContainer = () => {
       const res = await getNeoFeed(momentStartDate, momentEndDate);
       setObjects(res.data.near_earth_objects);
     }catch{
-      setError({ message: "Une erreur est survenu pendant la récupération des données"});
+      setError({ message: "An error occured while retrieving data"});
 
     }
   };

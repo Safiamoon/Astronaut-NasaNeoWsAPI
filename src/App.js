@@ -4,10 +4,7 @@ import './App.scss';
 import './index.scss';
 import NasaContainer from "./NasaContainer";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-// import Astronaut from "./NasaItem";
 
-
- 
 // class App extends Component {
 //   constructor(props) {
 //     super(props);

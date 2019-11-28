@@ -5,11 +5,11 @@ export const checkInterval = (startDate, endDate) => {
   const momentEndDate = moment(endDate);
 
   if (momentEndDate.isBefore(momentStartDate)) {
-    throw new Error("La date de fin ne peut être avant la date de début");
+    throw new Error("The end date can't be before the start date");
   }
 
   if (momentStartDate.add(7, "days").isBefore(momentEndDate)) {
-    throw new Error("L'intervalle maximum est de 7 jours");
+    throw new Error("the maximum interval is 7 days");
   }
 };
 
