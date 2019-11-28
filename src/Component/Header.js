@@ -1,6 +1,6 @@
   
 import React from "react";
-import logo from './images/nasaico.png'
+import logo from '../images/nasaico.png'
 
 const Header = () => (
    

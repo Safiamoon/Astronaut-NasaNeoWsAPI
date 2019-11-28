@@ -1,5 +1,5 @@
 import Axios from "axios";
-import {API_URL} from "./constants"
+import {API_URL} from "../constants"
 
 export const getNeoFeed = async (startDate, endDate) => {
     const data = await Axios.get(

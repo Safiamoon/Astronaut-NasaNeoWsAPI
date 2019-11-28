@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.scss';
 import 'uikit';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import App from './Component/App';
  
 
 ReactDOM.render(<App />, document.getElementById('root'));
