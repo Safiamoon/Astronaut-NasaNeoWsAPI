@@ -1,26 +1,35 @@
-// import React from "react";
+import React from "react";
+import "./Nasa.scss";
 
-// const NasaItem = ({
-//     neo_reference_id,
-//     name,
-//     estimated_diameter,
-//     close_approach_data
-// }) => {
-//     const arrondi =(nb) => {
-//         return Math.round(nb)
-//     }
-// }
+const NasaItem = ({
+  name,
+  absolute_magnitude_h,
+  estimated_diameter,
+  close_approach_data.close_approach_date_full
+}) => {
 
-// return (
-//     <div className="card shadow mt-3 weather-card forecast-item">
-//         <div className="card-header text-center bg-dark text-white">
-//         <h2>{neo_reference_id}</h2>
-//         <p className="m-0">{name}</p>
-//         </div>
-//         <div className="card-body">
-//             <h4> estimated_diameter : {arrondi(estimated_diameter)}</h4>
-//         </div>
-//   </div>
-// );
+  const arrondi = (nb) => {
+    return Math.round(nb);
+  }
 
-// export default NasaItem;
+  return (
+    <div className="card shadow mt-3 weather-card forecast-item">
+      <div className="card-header text-center bg-primary text-white">
+        <h3>{name}</h3>
+      </div>
+      <div className="card-body">
+        <h4>Vitesse : {arrondi(speed)} km/h</h4>
+        <h4>D-Min : {arrondi(diameterMin)} m</h4>
+        <h4>D-Max : {arrondi(diameterMax)} m</h4>
+      </div>
+      <div className="card-footer text-center">
+        <h4>
+          <span className="badge badge-light">
+          </span>
+        </h4>
+      </div>
+    </div>
+  );
+};
+
+export default NasaItem;

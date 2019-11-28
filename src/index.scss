@@ -1,4 +1,7 @@
 @import "~bootstrap/scss/bootstrap";
+@import "~uikit/src/scss/variables";
+@import "~uikit/src/scss/mixins";
+@import "~uikit/src/scss/uikit";
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -6,9 +9,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("images/nasa2.jpg");
+  background-image: url("images/nasa4.jpg");
   background-size: cover;
-  height:100%;
+  height:100vh;
   margin:0;
   width:100%;
   background-position: center center fixed;
