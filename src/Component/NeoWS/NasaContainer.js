@@ -6,7 +6,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment";
 import NeoWsError from "./NeoWsError";
 import NeoWsSearch from "./NeoWsSearch";
-import NeoWsObjects from "./NeoWsObjects";
+import NeoWsAsteroids from "./NeoWsAsteroids";
 import { checkInterval } from "../../Utils/dateUtils";
 
 const NasaContainer = () => {
@@ -21,7 +21,7 @@ const NasaContainer = () => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [error, setError] = useState(null);
-  const [objects, setObjects]= useState(null);
+  const [asteroids, setAsteroids]= useState(null);
 
 // useEffect permet de déclencher ce qu'on appelle des "effets de bord"
   // Lors du changement d'une variable d'état (par exemple), on pourra lancer une fonction
@@ -43,10 +43,16 @@ const NasaContainer = () => {
   // Elle n'aura donc aucune raison de s'exécuter de nouveau ensuite.
   // C'est l'équivalent de la méthode componentDidMount dans un composant classe
 
-  useEffect(()=>{
-    console.log(objects);
-
-  }, [objects]);
+  useEffect(() => {
+    //Récupération de mon objet
+    // console.log("liste de mes objets ", asteroides);
+    // if(asteroides !== null )  {
+    //   //Récupération de mes dates
+    //   const asteroidesDates = Object.keys(asteroides);
+    //   console.log("date des astéroîdes : ", asteroidesDates)
+    // }
+    console.log("Je suis monté !");
+  }, []);
 
   //Récupérer les données de l'API de la nasa
   const getDataApi = async() => {
@@ -55,14 +61,14 @@ const NasaContainer = () => {
       const momentEndDate = moment(endDate).format(DATE_FORMAT);
 
       const res = await getNeoFeed(momentStartDate, momentEndDate);
-      setObjects(res.data.near_earth_objects);
+      setAsteroids(res.data.near_earth_objects);
     }catch{
       setError({ message: "An error occured while retrieving data"});
 
     }
   };
   return (
-    <div className="uk-container">
+    <div className="uk-container font-style: gras ">
     <NeoWsError error={error} />
 
     <NeoWsSearch
@@ -73,7 +79,7 @@ const NasaContainer = () => {
       onClickHandler={getDataApi}
     />
 
-    <NeoWsObjects />
+    {asteroids && <NeoWsAsteroids asteroidsCollection={asteroids} />}
   </div>
   );
 };

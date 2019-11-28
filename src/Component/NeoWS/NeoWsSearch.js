@@ -9,7 +9,7 @@ const NeoWsSearch = ({
     onClickHandler
 }) => {
     return (
-          <div className={`container-fluid text-center text-white`}>
+          <div className={`container-fluid text-center text-white font-style: gras`}>
             Start date 
             <DatePicker
               dateFormat="dd/MM/yyyy"
@@ -28,7 +28,7 @@ const NeoWsSearch = ({
               className="uk-input"
               onChange={endDateChangeHandler}
             />
-            <button className="uk-button uk-button-danger" onClick={onClickHandler}>
+            <button className="uk-button uk-button-danger font-style: gras" onClick={onClickHandler}>
               SEARCH
             </button>
           </div>
