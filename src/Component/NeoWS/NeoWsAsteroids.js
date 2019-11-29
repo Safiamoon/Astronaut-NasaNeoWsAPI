@@ -5,7 +5,7 @@ const NeoWsAsteroids = ({ asteroidsCollection }) => {
   const asteroidsDates = Object.keys(asteroidsCollection);
   console.log("Dates des astéroïdes : ", asteroidsDates);
 
-  asteroidsDates.sort((a, b) => {
+  const sortedasteroidDates = asteroidsDates.slice().sort((a, b) => {
     let dateA = new Date(a);
     let dateB = new Date(b);
 
@@ -14,7 +14,7 @@ const NeoWsAsteroids = ({ asteroidsCollection }) => {
 
   return (
     <div className={`container-fluid text-center text-white font-style: gras`}>
-      {asteroidsDates.map(asteroidsDate => (
+      {sortedasteroidDates.map(asteroidsDate => (
         <div className={`text-white`} >
           <h2 style ={{color:"red"}} >{asteroidsDate}</h2>
           <div className={`container-fluid text-center text-white font-style: gras`}>
