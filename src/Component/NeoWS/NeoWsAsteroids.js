@@ -13,11 +13,11 @@ const NeoWsAsteroids = ({ asteroidsCollection }) => {
   });
 
   return (
-    <div className={`container-fluid text-center text-white font-style: gras`}>
+    <div className={`d-flex flex-lg-row font-size: 3em`}>
       {sortedasteroidDates.map(asteroidsDate => (
-        <div className={`text-white`} >
+        <div className ={`text-white`} key={asteroidsDate} >
           <h2 style ={{color:"red"}} >{asteroidsDate}</h2>
-          <div className={`container-fluid text-center text-white font-style: gras`}>
+          <div className={`flex-wrap flex-lg-row justify-content-center align-items-centertext-center text-white font-style: gras`}>
             {asteroidsCollection[asteroidsDate].map(asteroid => (
               <div key={asteroid.id}>{asteroid.name}</div>
             ))}

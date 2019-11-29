@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "~bootstrap/scss/bootstrap";
 @import "~uikit/src/scss/variables";
 @import "~uikit/src/scss/mixins";
 @import "~uikit/src/scss/uikit";
@@ -15,7 +15,8 @@ body {
   margin:0;
   width:100%;
   background-position: center center fixed;
-  background-repeat: no-repeat;
+  // background-attachment: fixed;
+  background-repeat: repeat-y;
   -webkit-backgorund-size:cover;
   -moz-background-size: cover;
   -o-background-size: cover;
