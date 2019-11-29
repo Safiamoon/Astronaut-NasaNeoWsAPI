@@ -10,13 +10,9 @@ Nous allons partir sur un filtre de date (date de début, date de fin) qui perme
 
 Vous récupérerez donc la liste des astéroïdes passés près de la Terre sur cette période.
 
-Pour chaque élément de la liste, vous êtes libres d'afficher les informations que vous voulez, mais il en faut au minimum 4 ou 5.
+Pour chaque élément de la liste, vous êtes libres d'afficher les informations que vous voulez.
 
 Chaque élément aura un lien vers une "fiche individuelle", permettant d'afficher les informations d'un astéroïde.
-
-Sur une fiche individuelle, on aura la possibilité de retourner à la page d'accueil.
-
->Il ne sera pas nécessaire, au retour sur la page d'accueil, d'avoir gardé les informations de filtre (période sélectionnée, etc...). Si vous le souhaitez, au lieu de faire une page individuelle à part (avec du routing), vous pouvez faire une *SPA (Single Page Application)*, donc utiliser une seule page dans laquelle vous affichez la liste, et la fiche quand vous sélectionnez un astéroïde
 
 ## Composants
 
